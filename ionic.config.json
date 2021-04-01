@@ -1,0 +1,7 @@
+{
+  "name": "be-fit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
