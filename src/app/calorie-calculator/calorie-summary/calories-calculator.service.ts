@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { CaloriesSummary } from "./calories-summary";
+import { CalorieKeys, CaloriesSummary } from "./calories.model";
 
 @Injectable({
     providedIn: 'root',
@@ -16,10 +16,10 @@ export class CalorieCalculatorService {
 
     public calculateCalories(){
         return Object.keys(this.calories)
-        .reduce((acc, currentValue: keyof CaloriesSummary) => acc + this.calculateCaloriesForNutrientGroup(currentValue), 0)
+        .reduce((acc, currentValue: CalorieKeys) => acc + this.calculateCaloriesForNutrientGroup(currentValue), 0)
     }
 
-    public calculateCaloriesForNutrientGroup(key: keyof CaloriesSummary): number{
+    public calculateCaloriesForNutrientGroup(key: CalorieKeys): number{
        return this.calories[key] * this._caloriesSummary[key];
     }
 }

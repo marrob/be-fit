@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalorieCalculatorService } from './calories-calculator.service';
-import { CaloriesSummary } from './calories-summary';
+import { CalorieKeys, CaloriesSummary } from './calories.model';
 
 @Component({
   selector: 'app-calorie-summary',
@@ -17,7 +17,7 @@ export class CalorieSummaryComponent implements OnInit {
   ngOnInit() {
     this.calorieCalculatorService.caloriesSummary = this.caloriesSummary;
     this.allCalories = this.calorieCalculatorService.calculateCalories();
-    Object.keys(this.caloriesSummary).map((key: keyof CaloriesSummary) => {
+    Object.keys(this.caloriesSummary).map((key: CalorieKeys) => {
       this.caloriesByNutrientGroup[key] = this.calorieCalculatorService.calculateCaloriesForNutrientGroup(key)
     })
   }
