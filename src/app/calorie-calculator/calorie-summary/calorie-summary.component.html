@@ -1,0 +1,9 @@
+<div>
+  {{allCalories}}
+  <span>Carbohydrate </span>
+  <span>Proteins</span>
+  <span>Fat</span>
+   <div *ngFor="let nutrition of caloriesByNutrientGroup | keyvalue">
+     {{nutrition.key}}: {{nutrition.value}}
+   </div>
+</div>

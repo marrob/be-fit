@@ -1,0 +1,45 @@
+<form [formGroup]="personalData">
+  Calendar
+  <app-calorie-summary></app-calorie-summary>
+    <ion-item>
+      <ion-label>
+        Height:
+      </ion-label>
+      
+        <ion-input type="text"  formControlName="height"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Weight:
+     
+      </ion-label>
+        <ion-input type="number"  formControlName="weight"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Age:
+      </ion-label>
+       
+        <ion-input type="number" formControlName="age"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+       Nutrition
+      </ion-label>
+      <ion-segment>
+        <ion-segment-button value="usual">
+          <ion-label>Usual</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="most-recent">
+          <ion-label>Most Recent</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="favourites">
+          <ion-label>Favourites</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item>
+    <ion-item>
+      Activities
+    </ion-item>
+  </form>
