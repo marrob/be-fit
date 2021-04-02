@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/common/config.service';
+import { IMenuItem } from 'src/app/common/imenu-item';
 
 @Component({
   selector: 'app-component-list',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentListComponent implements OnInit {
 
-  constructor() { }
+
+  items:IMenuItem[]= this.config.debugMenuItems;
+
+  constructor(private config:ConfigService) {}
+
 
   ngOnInit() {}
 

@@ -1,3 +1,5 @@
-<p>
-  component-list works!
-</p>
+<ion-list>
+  <ion-item *ngFor = "let item of items">
+    <a [routerLink] = item.link > {{item.text}} </a>
+  </ion-item>
+</ion-list>

@@ -1,9 +1,16 @@
 ### Ionic
+
+Ionic CLI ha még nincs:
+- npm install -g ionic
 https://ionicframework.com/docs/angular/your-first-app
 - Create an App
 ionic start be-fit tabs --type=angular --capacitor
 - Run the App
 ionic serve
+
+## version
+ionic -v
+6.13.1
 
 
 ### Deploy menete
@@ -42,3 +49,35 @@ Project Console: https://console.firebase.google.com/project/be-fit-123456/overv
 Hosting URL: https://be-fit-123456.web.app
 PS D:\angular\be-fit\www> 
 
+### ion-list
+https://ionicframework.com/docs/api/list
+# text-list
+<ion-list>
+  <ion-item>
+    <ion-label>Pokémon Yellow</ion-label>
+  </ion-item>
+</ion-list>
+
+
+### back-button
+https://ionicframework.com/docs/api/back-button
+<!-- Default back button -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+### routerLink binding
+<ion-list>
+  <ion-item *ngFor = "let item of items">
+    <a [routerLink] = item.link > {{item.text}} </a>
+  </ion-item>
+</ion-list>
+
+
+### slots
+https://www.joshmorony.com/understanding-how-slots-are-used-in-ionic-4/
