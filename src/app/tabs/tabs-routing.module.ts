@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from '../components/test/test.component';
+import { Tab1Page } from '../tab1/tab1.page';
 import { TabsPage } from './tabs.page';
 
 
@@ -24,8 +25,12 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'test-link',
-    component: TestComponent
+    path:'test-link',
+    component:TestComponent
+  },
+  {
+    path: 'tab1',
+    component: Tab1Page
   },
   {
     path: '',
