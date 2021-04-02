@@ -1,0 +1,24 @@
+  Please enter your personal data for the calorie calculation
+  <form [formGroup]="personalData">
+    <ion-item>
+      <ion-label>
+        Height:
+      </ion-label>
+      
+        <ion-input type="text"  formControlName="height"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Weight:
+     
+      </ion-label>
+        <ion-input type="number"  formControlName="weight"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Age:
+      </ion-label>
+       
+        <ion-input type="number" formControlName="age"></ion-input>
+    </ion-item>
+  </form>
