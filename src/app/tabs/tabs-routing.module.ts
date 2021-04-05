@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from '../components/login/login.component';
 import { TestComponent } from '../components/test/test.component';
+import { MealSelectorComponent } from '../meal-selector/meal-selector.component';
 import { Tab1Page } from '../tab1/tab1.page';
 import { TabsPage } from './tabs.page';
 
@@ -28,6 +30,14 @@ const routes: Routes = [
         pathMatch: 'full'
       }
     ]
+  },
+  {
+    path:'login-link',
+    component:LoginComponent
+  },
+  {
+    path:'meal-selector-link',
+    component:MealSelectorComponent
   },
   {
     path:'test-link',
