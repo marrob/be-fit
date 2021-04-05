@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Comonents List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <a [routerLink]=item.link> {{item.text}} </a>
+    </ion-item>
+  </ion-list>
+</ion-content>
