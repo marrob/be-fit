@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BudgetPlannerComponent } from '../components/budget-planner/budget-planner.component';
 import { LoginComponent } from '../components/login/login.component';
 import { TestComponent } from '../components/test/test.component';
 import { MealSelectorComponent } from '../meal-selector/meal-selector.component';
@@ -17,6 +18,15 @@ const routes: Routes = [
         loadChildren: () => import('../calorie-calculator/calorie-calculator.module').then(m => m.CalorieCalculatorModule)
       },
       {
+        path:'login-link',
+        component:LoginComponent
+//        loadChildren: () => import('../components/login/login.component').then(m => m.LoginComponent)
+      },
+      {
+        path:'budget-planner-link',
+        component:BudgetPlannerComponent
+      },
+      {
         path: 'tab2',
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
@@ -30,10 +40,6 @@ const routes: Routes = [
         pathMatch: 'full'
       }
     ]
-  },
-  {
-    path:'login-link',
-    component:LoginComponent
   },
   {
     path:'meal-selector-link',
