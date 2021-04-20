@@ -1,0 +1,26 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)"> 
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input
+      type = "text"
+      required
+      [(ngModel)] = authForm.email
+      ngControl = "email"
+      ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input
+    type="password"
+    required
+    minlength="6"
+    [(ngModel)] = authForm.password
+    ></ion-input>
+  </ion-item>
+  <ion-button
+    type="submit"
+    color="primary"
+    expand="block">
+    Singh Up
+  </ion-button>
+</form> 
