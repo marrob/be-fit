@@ -10,10 +10,10 @@ export class ConfigService {
 
   //You have to add the new comoponent link into the tabs-routing.module.ts
   debugMenuItems: IMenuItem[] = [
-    { text: 'Auth', link: '/tabs/auth-link' },
-    { text: 'Budget Planner', link:'/tabs/budget-planner-example'},
-    { text: 'Calorie Calculator', link: '/tabs/calorie-calculator' },
-    { text: 'Meal Selector', link: '/tabs/meal-selector' },
+    { text: 'Auth', link: '/auth' },
+    { text: 'Budget Planner', link:'/main-path/tabs/budget-planner-example'},
+    { text: 'Calorie Calculator', link: '/main-path/tabs/calorie-calculator' },
+    { text: 'Meal Selector', link: '/main-path/tabs/meal-selector' },
     { text: 'Teszt Komponens', link: '/test-link' },
   ];
   

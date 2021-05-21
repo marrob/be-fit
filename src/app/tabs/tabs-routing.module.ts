@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Tab1Page } from '../tab1/tab1.page';
 import { TabsPage } from './tabs.page';
 
 
@@ -22,15 +21,6 @@ const routes: Routes = [
         loadChildren: () => import('../meal-selector/meal-selector.module').then( m => m.MealSelectorPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-      },
-      {
-        path: 'tab3',
-        //loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-        loadChildren: () => import('../modul-list/modul-list.module').then( m => m.ModulListPageModule)
-      },
-      {
         path: 'modul-list',
         loadChildren: () => import('../modul-list/modul-list.module').then( m => m.ModulListPageModule)
       },
@@ -40,18 +30,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/calorie-calculator',
+        redirectTo: '/main-path/tabs/calorie-calculator',
         pathMatch: 'full'
-      }
+      },
     ]
   },
   {
-    path: 'tab1',
-    component: Tab1Page
-  },
-  {
     path: '',
-    redirectTo: '/tabs/calorie-calculator',
+    redirectTo: '/main-path/tabs/calorie-calculator',
     pathMatch: 'full'
   }
 ];
